@@ -1,0 +1,12 @@
+/* Estilo para el fondo de la sección hero */
+#hero {
+    height: 100vh; /* O ajusta a tu preferencia */
+    color: white; /* Color de texto blanco para contrastar con la imagen */
+  }
+  
+  .carousel-item img {
+    object-fit: cover; /* Hace que las imágenes del carrusel cubran todo el área */
+    height: 100vh; /* Hace que las imágenes del carrusel ocupen toda la altura */
+    width: 100%; /* Hace que las imágenes del carrusel ocupen todo el ancho */
+  }
+  
