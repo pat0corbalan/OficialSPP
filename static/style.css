@@ -1,65 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-
-/* Estilo para el fondo de la sección hero */
-#hero {
-    height: 100vh; /* O ajusta a tu preferencia */
-    color: white; /* Color de texto blanco para contrastar con la imagen */
-  }
+/* Definir variables en :root para facilitar la configuración */
+:root {
+  /* Colores */
+  --color-primary: #007bff;
+  --color-primary-dark: #0056b3;
+  --color-accent: #6c757d;
+  --color-background: #f8f9fa;
+  --color-dark: #343a40;
+  --color-dark-hover: #212529;
+  --color-white: #f8f9fa;
   
-  .carousel-item img {
-    object-fit: cover; /* Hace que las imágenes del carrusel cubran todo el área */
-    height: 100vh; /* Hace que las imágenes del carrusel ocupen toda la altura */
-    width: 100%; /* Hace que las imágenes del carrusel ocupen todo el ancho */
-  }
+  /* Fuentes */
+  --font-family-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family-heading: 'Archivo Black', serif;
   
-.spp-h1{
-  font-family: "Archivo Black", serif;
-  font-size: 20px;
+  /* Otros valores */
+  --transition-duration: 0.1s;
+  --transition-ease: ease;
 }
-/* General */
+
+/* Estilo base para el cuerpo y elementos comunes */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-family-primary);
   line-height: 1.6;
-  background-color: #f8f9fa;
+  background-color: var(--color-background);
   color: #333;
   margin: 0;
   padding: 0;
-  transition: all 0.3s ease;
+  transition: all var(--transition-duration) var(--transition-ease);
 }
 
+/* Estilo de las fuentes de los encabezados */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all var(--transition-duration) var(--transition-ease);
 }
 
-/* Encabezados */
-h2, h3 {
+/* Estilos generales para la navbar */
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.navbar .navbar-brand img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 1rem;
+}
+
+.navbar-nav .nav-link {
+  color: #555;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
-h2:hover, h3:hover {
-  color: #007bff; /* Cambio de color en hover */
-}
-
-/* Navegación */
-nav a {
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--color-primary);
   text-decoration: none;
+}
+
+/* Dropdown */
+.nav-item.dropdown .dropdown-toggle {
+  color: #555;
   font-weight: 500;
-  color: #6c757d;
-  transition: all 0.3s ease;
 }
 
-nav a:hover {
-  color: #007bff;
-  transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+.nav-item.dropdown .dropdown-menu {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
 }
 
-/* Animación de aparición */
-.fade-in {
-  animation: fadeIn 1s ease-out;
+.nav-item.dropdown .dropdown-item {
+  transition: background-color 0.3s ease;
 }
 
-/* Carrusel */
+.nav-item.dropdown .dropdown-item:hover {
+  background-color: var(--color-primary-light);
+  color: #fff;
+}
+
+/* Navbar en dispositivos móviles */
+.navbar-toggler {
+  border-color: #ddd;
+}
+
+.navbar-toggler-icon {
+  background-color: #333;
+}
+
+/* Estilos para la navbar en pantallas pequeñas */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+  }
+}
+
+/* Estilos del carrusel */
+.carousel-item img {
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+}
+
 .carousel-item {
   opacity: 0;
   animation: fadeIn 2s forwards;
@@ -70,23 +129,33 @@ nav a:hover {
   animation: fadeIn 2s forwards;
 }
 
+/* Animación de Fade */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Efecto de hover en las imágenes de la galería */
+/* Estilo de los botones */
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  transition: background-color var(--transition-duration), transform var(--transition-duration);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-dark);
+  transform: scale(1.1);
+}
+
+/* Efectos de transiciones para las galerías */
 #galeria .bg-light {
   overflow: hidden;
   transition: transform 0.4s ease-in-out;
 }
 
 #galeria .bg-light:hover {
-  transform: scale(1.05); /* Agrandar ligeramente la imagen al pasar el ratón */
+  transform: scale(1.05);
 }
 
 #galeria img {
@@ -94,47 +163,18 @@ nav a:hover {
 }
 
 #galeria .bg-light:hover img {
-  transform: scale(1.1); /* Aumentar la imagen al hacer hover */
+  transform: scale(1.1);
 }
 
-/* Fondo de sección */
-#galeria, #programas, #testimonios {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Animación de desplazamiento en el carrusel */
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  filter: invert(1);
-  transition: transform 0.3s ease;
-}
-
-.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
-  transform: scale(1.1); /* Aumentar iconos de navegación del carrusel */
-}
-
-/* Botones */
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  transition: background-color 0.4s ease, transform 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #004085;
-  transform: scale(1.1); /* Efecto de aumento en hover */
-}
-
-/* Efectos de transiciones en testimonios */
+/* Efectos de transiciones para los testimonios */
 #testimonios .bg-dark {
-  background-color: #343a40 !important;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: var(--color-dark);
+  transition: transform var(--transition-duration), background-color var(--transition-duration);
 }
 
 #testimonios .bg-dark:hover {
-  background-color: #212529; /* Cambio de color al hacer hover */
-  transform: translateY(-5px); /* Leve movimiento hacia arriba */
+  background-color: var(--color-dark-hover);
+  transform: translateY(-5px);
 }
 
 #testimonios p {
@@ -144,32 +184,15 @@ nav a:hover {
 }
 
 @keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Transiciones de los programas */
+/* Estilo de los programas */
 #programas .col {
   transform: translateY(50px);
   opacity: 0;
   animation: slideUp 0.6s ease-out forwards;
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 #programas .col:hover {
@@ -177,14 +200,14 @@ nav a:hover {
   transition: transform 0.4s ease;
 }
 
-/* Estilo del pie de página */
+/* Pie de página */
 footer {
-  background-color: #212529;
+  background-color: var(--color-dark);
   padding: 2rem 0;
 }
 
 footer h4, footer p {
-  color: #f8f9fa;
+  color: var(--color-white);
 }
 
 footer ul li {
@@ -192,59 +215,45 @@ footer ul li {
 }
 
 footer a {
-  color: #f8f9fa;
-  transition: color 0.3s ease;
+  color: var(--color-white);
+  transition: color var(--transition-duration);
 }
 
 footer a:hover {
-  color: #007bff;
+  color: var(--color-primary);
 }
 
 footer .social-icons a {
   font-size: 1.5rem;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-duration);
 }
 
 footer .social-icons a:hover {
   transform: scale(1.2);
-  color: #007bff;
+  color: var(--color-primary);
 }
 
 /* Formulario de contacto */
 form input,
 form textarea {
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow var(--transition-duration);
 }
 
 form input:focus, form textarea:focus {
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
-  border-color: #007bff;
+  border-color: var(--color-primary);
 }
 
 form button {
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color var(--transition-duration), transform var(--transition-duration);
 }
 
 form button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05); /* Agrandar el botón en hover */
+  background-color: var(--color-primary-dark);
+  transform: scale(1.05);
 }
 
-/* Transición de la galería */
-#galeria .bg-light {
-  position: relative;
-  overflow: hidden;
-}
-
-#galeria .bg-light img {
-  transition: transform 0.5s ease;
-}
-
-#galeria .bg-light:hover img {
-  transform: scale(1.1); /* Efecto de aumento de imagen */
-}
-
-/* Efecto de Fade In en elementos al hacer scroll */
+/* Efectos de Fade In mientras haces scroll */
 .fade-in-on-scroll {
   opacity: 0;
   transform: translateY(50px);
@@ -256,3 +265,69 @@ form button:hover {
   transform: translateY(0);
 }
 
+/* Animación de Fade y escala */
+.scale-up-on-scroll {
+  opacity: 0;
+  transform: translateY(50px) scale(0.8);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scale-up-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Animación de rotación al hacer scroll */
+.rotate-on-scroll {
+  opacity: 0;
+  transform: rotate(-10deg);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.rotate-on-scroll.visible {
+  opacity: 1;
+  transform: rotate(0);
+}
+
+/* Añadir efectos de desenfoque en el fondo */
+.blur-on-scroll {
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 0.6s ease, filter 0.6s ease;
+}
+
+.blur-on-scroll.visible {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Animación de desplazamiento lateral */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Sombras dinámicas en botones */
+.btn-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.btn-shadow:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Animación de rotación al hacer hover */
+.rotate-hover {
+  transition: transform 0.4s ease;
+}
+
+.rotate-hover:hover {
+  transform: rotate(10deg);
+}

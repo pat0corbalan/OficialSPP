@@ -10,23 +10,57 @@
 </head>
 <body>
 
-  <header class="bg-white shadow-sm">
-    <div class="container-fluid px-4 py-4 d-flex justify-content-between align-items-center">
-      <a href="/" class="text-2xl font-weight-bold text-secondary spp-h1">
-        Servicio Penitenciario Provincial
-      </a>
-      <nav class="d-none d-md-flex gap-4">
-        <a href="#impacto" class="text-secondary text-decoration-none hover:text-primary">Nuestro Impacto</a>
-        <a href="#programas" class="text-secondary text-decoration-none hover:text-primary">Programas</a>
-        <a href="#testimonios" class="text-secondary text-decoration-none hover:text-primary">Testimonios</a>
-        <a href="#noticias" class="text-secondary text-decoration-none hover:text-primary">Noticias</a>
-        <a href="#contacto" class="text-secondary text-decoration-none hover:text-primary">Contacto</a>
-      </nav>
-      <button class="d-md-none btn btn-link">
-        <i class="bi bi-list" style="font-size: 24px;"></i>
-      </button>
-    </div>
-  </header>
+    <header class="bg-white shadow-sm">
+        <div class="container-fluid px-4 py-3">
+            <!-- Navbar principal -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+                <!-- Logo con imagen de ejemplo -->
+                <a class="navbar-brand d-flex align-items-center" href="/">
+                    <img src="https://placehold.co/600x400" alt="Logo" class="me-2">
+                    <span>Servicio Penitenciario Provincial</span>
+                </a>
+                
+                <!-- Botón de menú en dispositivos móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Menú colapsado para pantallas pequeñas -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Novedades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="autoridades.html">Autoridades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="institucional.html">Institucional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="divisiones.html">Divisiones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="direcciones.html">Direcciones</a>
+                        </li>
+    
+                        <!-- Dropdown para "Otras dependencias" -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Otras dependencias
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Instituto de formación y capacitación</a></li>
+                                <li><a class="dropdown-item" href="#">Sección Traslado de Internos</a></li>
+                                <li><a class="dropdown-item" href="#">Sección Canes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
   
   <div class="container mt-4">
     <h2 class="text-center mb-4">Autoridades del Servicio Penitenciario de la Provincia de Misiones</h2>
@@ -37,9 +71,9 @@
           
           <div class="col-3">
             <div class="bg-white rounded-lg shadow-md p-4 text-center">
-              <img src="https://placehold.co/600x400" alt="Nombre de la autoridad" class="rounded-circle mx-auto mb-4" width="200" height="200">
+              <img src="https://placehold.co/600x400" alt="Maria Rosa Coria de Lezana" class="rounded-circle mx-auto mb-4" width="200" height="200">
               <h3 class="h5 font-weight-semibold mb-2">Directora General</h3>
-              <p class="text-muted">Nombre de la Autoridad</p>
+              <p class="text-muted">Maria Rosa Coria de Lezana</p>
             </div>
           </div>
           
