@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicio Penitenciario Provincial</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="static/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+  <header class="bg-white shadow-sm">
+    <div class="container-fluid px-4 py-4 d-flex justify-content-between align-items-center">
+      <a href="/" class="text-2xl font-weight-bold text-secondary spp-h1">
+        Servicio Penitenciario Provincial
+      </a>
+      <nav class="d-none d-md-flex gap-4">
+        <a href="#impacto" class="text-secondary text-decoration-none hover:text-primary">Novedades</a>
+        <a href="autoridades.html" class="text-secondary text-decoration-none hover:text-primary">Autoridades</a>
+        <a href="#testimonios" class="text-secondary text-decoration-none hover:text-primary">Testimonios</a>
+        <a href="#noticias" class="text-secondary text-decoration-none hover:text-primary">Noticias</a>
+        <a href="#contacto" class="text-secondary text-decoration-none hover:text-primary">Contacto</a>
+      </nav>
+      <button class="d-md-none btn btn-link">
+        <i class="bi bi-list" style="font-size: 24px;"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Aquí es donde se incluirá el contenido específico de cada página -->
+  <div class="container">
+    {% block content %}
+    <!-- Este es el contenido por defecto si no se sobreescribe el bloque en la plantilla hija -->
+    <h2>Bienvenido al Servicio Penitenciario Provincial</h2>
+    <p>Este es el contenido principal de la página.</p>
+    {% endblock %}
+  </div>
+
+  <!-- Sección de Pie de Página -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <h3 class="h5 fw-semibold mb-3">Servicio Penitenciario Provincial</h3>
+          <p class="text-white">Transformando vidas y construyendo un futuro mejor para nuestra comunidad.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h4 class="h6 fw-semibold mb-3">Enlaces Rápidos</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Inicio</a></li>
+            <li><a href="#impacto" class="text-white text-decoration-none">Nuestro Impacto</a></li>
+            <li><a href="#programas" class="text-white text-decoration-none">Programas</a></li>
+            <li><a href="#noticias" class="text-white text-decoration-none">Noticias</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4">
+          <h4 class="h6 fw-semibold mb-3">Síguenos</h4>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white text-decoration-none">
+              <i class="bi bi-facebook h4"></i>
+            </a>
+            <a href="#" class="text-white text-decoration-none">
+              <i class="bi bi-twitter h4"></i>
+            </a>
+            <a href="#" class="text-white text-decoration-none">
+              <i class="bi bi-instagram h4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p class="text-white">&copy; 2023 Servicio Penitenciario Provincial. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS and Icons for Menu icon -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>
