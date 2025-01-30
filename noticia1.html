@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicio Penitenciario Provincial</title>
+  <link rel="icon" href="/static/logo.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="static/style.css" rel="stylesheet" type="text/css">
+  <style>
+    .noticia-titulo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+    }
+
+    .noticia-fecha {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      margin-bottom: 2rem;
+    }
+
+    .noticia-imagen {
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .noticia-texto {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #34495e;
+      margin-bottom: 1.5rem;
+    }
+
+    .noticia-cita {
+      font-style: italic;
+      color: #16a085;
+      border-left: 4px solid #16a085;
+      padding-left: 1rem;
+      margin: 2rem 0;
+    }
+
+    .noticia-destacado {
+      font-weight: bold;
+      color: #000000;
+    }
+
+    .noticia-pie {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      margin-top: 2rem;
+    }
+
+    .btn-volver {
+      margin-top: 2rem;
+      background-color: #3498db;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+    }
+
+    .btn-volver:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+    <header class="bg-white shadow-sm">
+        <div class="container-fluid px-4 py-3">
+            <!-- Navbar principal -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+                <!-- Logo con imagen de ejemplo -->
+                <a class="navbar-brand d-flex align-items-center" href="/">
+                  <img src="/static/logo.png" alt="Logo" class="me-2">
+                    <span>Servicio Penitenciario Provincial</span>
+                </a>
+                
+                <!-- Botón de menú en dispositivos móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Menú colapsado para pantallas pequeñas -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Novedades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="autoridades.html">Autoridades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="institucional.html">Institucional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="divisiones.html">Divisiones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="direcciones.html">Direcciones</a>
+                        </li>
+    
+                        <!-- Dropdown para "Otras dependencias" -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Otras dependencias
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Instituto de formación y capacitación</a></li>
+                                <li><a class="dropdown-item" href="#">Sección Traslado de Internos</a></li>
+                                <li><a class="dropdown-item" href="#">Sección Canes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+<body>
+  <div class="container my-5">
+    <!-- Título de la noticia -->
+    <h1 class="noticia-titulo">Nuevo Programa de Capacitación Laboral</h1>
+    
+    <!-- Fecha de publicación -->
+    <p class="noticia-fecha">Publicado el 15 de Mayo, 2023</p>
+    
+    <!-- Imagen de la noticia -->
+    <img src="static/hero.jpg" class="img-fluid noticia-imagen" alt="Noticia 1">
+    
+    <!-- Texto de la noticia -->
+    <p class="noticia-texto">
+      El Servicio Penitenciario ha dado un paso significativo en su compromiso con la reinserción social y laboral de los internos al lanzar un nuevo programa de capacitación laboral. La iniciativa, que cuenta con el respaldo de la Ministra de Justicia y Derechos Humanos, <span class="noticia-destacado">Matilde O'Mill</span>, y la Directora General, <span class="noticia-destacado">María Rosa Coria de Lezana</span>, busca brindar herramientas prácticas a los internos para facilitar su reintegración a la sociedad una vez cumplida su condena.
+    </p>
+    
+    <p class="noticia-texto">
+      El programa ofrece cursos de formación en áreas de alta demanda laboral, como carpintería, electricidad y herrería. Estos cursos son dictados por profesionales especializados, lo que garantiza una formación de calidad y actualizada. Además, se ha incluido un módulo de emprendimiento para aquellos internos que deseen desarrollar sus propias ideas de negocio.
+    </p>
+    
+    <!-- Cita de la Ministra O'Mill -->
+    <blockquote class="noticia-cita">
+      "Creemos firmemente que la capacitación laboral es fundamental para romper el círculo de la delincuencia y brindar a los internos la oportunidad de construir un futuro mejor", afirmó la Ministra O'Mill.
+    </blockquote>
+    
+    <p class="noticia-texto">
+      Por su parte, la Directora <span class="noticia-destacado">Coria de Lezana</span> resaltó el trabajo conjunto con empresas locales, que se han comprometido a facilitar la inserción laboral de los internos que participan en el programa. "Hemos establecido convenios con empresas de diversos sectores, lo que aumenta significativamente las posibilidades de que los internos encuentren un empleo una vez que salgan en libertad", señaló.
+    </p>
+    
+    <p class="noticia-texto">
+      El programa de capacitación laboral ya ha comenzado a implementarse en diferentes establecimientos penitenciarios de la provincia y se espera que beneficie a un gran número de internos. Esta iniciativa se suma a otras acciones que viene llevando adelante el Servicio Penitenciario en materia de educación, deporte y cultura, con el objetivo de promover la reinserción social de las personas privadas de su libertad.
+    </p>
+    
+    <p class="noticia-texto">
+      La oficina de Comunicación, Protocolo y Ceremonial de la Dirección General se hizo presente en el lanzamiento del programa y pudo dialogar con algunos de los internos que participan en la iniciativa. "Estoy muy agradecido por esta oportunidad. Aprender un oficio me da esperanza y me motiva a seguir adelante", expresó uno de los internos.
+    </p>
+    
+    <p class="noticia-texto">
+      El Servicio Penitenciario reafirma su compromiso con la reinserción social de los internos y continúa trabajando para brindarles las herramientas necesarias para construir un futuro mejor.
+    </p>
+    
+    <!-- Pie de la noticia -->
+    <p class="noticia-pie">Santiago del Estero, Argentina</p>
+    
+    <!-- Botón para volver a noticias -->
+    <a href="index.html#noticias" class="btn btn-volver text-white">Volver a Noticias</a>
+  </div>
+</body>
+<!-- Sección de Pie de Página -->
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <h3 class="h5 fw-semibold mb-3">Servicio Penitenciario Provincial</h3>
+        <p class="text-white">Transformando vidas y construyendo un futuro mejor para nuestra comunidad.</p>
+      </div>
+      <div class="col-12 col-md-4">
+        <h4 class="h6 fw-semibold mb-3">Enlaces Rápidos</h4>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Inicio</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Destacados</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Programas</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Noticias</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-4">
+        <h4 class="h6 fw-semibold mb-3">Síguenos</h4>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white text-decoration-none">
+            <i class="bi bi-facebook h4"></i>
+          </a>
+          <a href="#" class="text-white text-decoration-none">
+            <i class="bi bi-twitter h4"></i>
+          </a>
+          <a href="#" class="text-white text-decoration-none">
+            <i class="bi bi-instagram h4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <p class="text-white">&copy; 2023 Servicio Penitenciario Provincial. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+</html>

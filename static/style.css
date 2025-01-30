@@ -337,3 +337,11 @@ form button:hover {
 .rotate-hover:hover {
   transform: rotate(10deg);
 }
+
+.text-truncate-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Número de líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
