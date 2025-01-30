@@ -345,3 +345,10 @@ form button:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+ /* Estilo para limitar la altura del texto */
+ .program-description {
+  overflow: hidden;
+  max-height: 100px; /* Ajusta esta altura según el diseño */
+  transition: max-height 0.3s ease-in-out;
+}
